@@ -12,7 +12,11 @@ function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
     const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState({});
-    
+    const [selectDelete, setSelectDelete] = React.useState(false);
+
+    const handleRemoveClick = () => {
+        setSelectDelete(!selectDelete);
+      };
 
 
     const handleEditAvatarClick = () => {
@@ -35,6 +39,7 @@ function App() {
         setIsEditAvatarPopupOpen(false);
         setIsEditProfilePopupOpen(false);
         setIsAddPlacePopupOpen(false);
+        setSelectDelete(false);
         setSelectedCard({});
       };
 
@@ -48,6 +53,7 @@ function App() {
         onEditProfile={handleEditProfileClick}
         onAddPlace={handleAddPlaceClick}
         onCardClick={handleCardClick}
+        onTrashClick={handleRemoveClick}
         />
         <Footer />
         <PopupWithForm
@@ -103,7 +109,7 @@ function App() {
        </PopupWithForm>
   
        <PopupWithForm
-        isOpen={isAddPlacePopupOpen}
+        isOpen={selectDelete}
         name ="delete-card"
         onClose={closeAllPopups}
         formName="add-form"

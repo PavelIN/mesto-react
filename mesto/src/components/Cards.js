@@ -10,7 +10,7 @@ const Card = (props) => {
   return (
     <div className="element">
                 <img className="element__image" src={props.card.link} alt={props.card.name} onClick={handleClick}/>
-                <button type="button" className="element__trash"></button>
+                <button type="button" className="element__trash" onClick={props.onTrashClick}></button>
                 <div className="element__container">
                     <h2 className="element__text">{props.card.name}</h2>
                     <div>

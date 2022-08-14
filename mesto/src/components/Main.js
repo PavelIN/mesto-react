@@ -57,7 +57,7 @@ const Main = (props) => {
             <section className="elements">
             {cards.map((card) => {
           return (
-            <Card key={card._id} card={card} onCardClick={props.onCardClick}/>
+            <Card key={card._id} card={card} onCardClick={props.onCardClick} onTrashClick={props.onTrashClick}/>
           );
         })}
             </section>

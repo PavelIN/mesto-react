@@ -45,7 +45,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="body">
     <div className="page">
         <Header />
         <Main 
@@ -62,15 +62,15 @@ function App() {
         onClose={closeAllPopups}
         formName="add-form"
         title="Редактировать профиль"
+        buttonText="Сохранить"
         >
         <fieldset className="form__set">
           <input id="name" className="form__input form__input_item_name" type="text" name="profilename"
-           placeholder="имя" required minlength="2" maxlength="40"/>
+           placeholder="имя" required minLength="2" maxLength="40"/>
           <span className="form__input-error name-error"></span>
           <input id="job" className="form__input form__input_item_job" type="text" name="job"
-           placeholder="вид деятельности" required minlength="2" maxlength="200"/>
+           placeholder="вид деятельности" required minLength="2" maxLength="200"/>
           <span className="job-error form__input-error"></span>
-          <button className="form__save" type="submit">Сохранить</button>
         </fieldset>
         </PopupWithForm>
         
@@ -80,12 +80,12 @@ function App() {
         onClose={closeAllPopups}
         formName="edit-avatar-form"
         title="Обновить аватар"
+        buttonText="Сохранить"
         >
         <fieldset className="form__set">
            <input type="url" name="avatar" id="avatar" placeholder="Ссылка на картинку" className="form__input"
             required/>
             <span className="form__input-error avatar-error"></span>
-            <button type="submit" className="form__save">Сохранить</button>
             </fieldset>
         </PopupWithForm>
          
@@ -96,15 +96,15 @@ function App() {
         onClose={closeAllPopups}
         formName="add-form"
         title="Новое место"
+        buttonText="Создать"
         >
             <fieldset className="form__set">
                         <input id="title" className="form__input form__input_item_target" type="text" name="name"
-                            placeholder="Название" required minlength="2" maxlength="30"/>
+                            placeholder="Название" required minLength="2" maxLength="30"/>
                         <span className="form__input-error title-error"></span>
                         <input id="link" className="form__input form__input_item_url" type="url" name="link"
                             placeholder="Ссылка на картинку" required/>
                         <span className="form__input-error link-error"></span>
-                        <button className="form__save " type="submit">Создать</button>
                     </fieldset>
        </PopupWithForm>
   
@@ -114,9 +114,9 @@ function App() {
         onClose={closeAllPopups}
         formName="add-form"
         title="Вы уверены?"
+        buttonText="Да"
         >
         <fieldset className="form__set">
-        <button type="submit" className="form__save">Да</button>
         </fieldset>
        </PopupWithForm>
 

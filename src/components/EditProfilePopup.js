@@ -41,10 +41,10 @@ return (<PopupWithForm
         >
         <fieldset className="form__set">
           <input onChange={handleChange} id="name" className="form__input form__input_item_name" type="text" name="profilename"
-           placeholder="имя" required minLength="2" maxLength="40" value={name}/>
+           placeholder="имя" required minLength="2" maxLength="40"/>
           <span className="form__input-error name-error"></span>
           <input onChange={handleChangeDes} id="job" className="form__input form__input_item_job" type="text" name="job"
-           placeholder="вид деятельности" required minLength="2" maxLength="200" value={description}/>
+           placeholder="вид деятельности" required minLength="2" maxLength="200"/>
           <span className="job-error form__input-error"></span>
         </fieldset>
         </PopupWithForm>)

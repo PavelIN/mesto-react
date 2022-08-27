@@ -133,7 +133,6 @@ function App() {
     setSelectDelete(false);
   };
 
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <div className="body">
@@ -154,9 +153,6 @@ function App() {
           <EditAvatarPopup isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onUpdateAvatar={handleUpdateAvatar} />
           <AddPlacePopup isOpen={isAddPlacePopupOpen} onClose={closeAllPopups} onAddPlace={handleAddPlaceSubmit} />
           <ConfirmationPopup cardId={removedCardId} isOpen={selectDelete} onClose={closeAllPopups} onAddPlace={handleAddPlaceSubmit} onCardDelete={handleCardDelete} />
-
-
-
           <ImagePopup onClose={closeAllPopups} card={selectedCard} />
         </div>
       </div>
